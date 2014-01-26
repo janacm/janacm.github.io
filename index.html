@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<meta charset ="utf-8">
 	<style type="text/css">
+		header, nav, footer, article {display:block;} /*HTML5*/
 		body {
 			text-align: center;
 			/*border: 10px solid #1e90ff;*/
@@ -18,6 +19,7 @@
 		article {
 			border: 5px;
 			margin: 5px;
+
 		}
 
 		img {
@@ -27,6 +29,10 @@
 		nav {
 			border: 10px solid royalblue;
 			color: blue;
+		}
+
+		small{
+			font-size: 0.09em;
 		}
 	</style>
 </head>
@@ -65,12 +71,14 @@
 	  </div><!-- /.navbar-collapse -->
 	</nav>
 	<header>
-		<h1>Janac Meena</h1>
-		<h4>Website coming soon...</h4>
+		<hgroup>
+			<h1>Janac Meena</h1>
+			<h4>Website coming soon...</h4>
+		</hgroup>
+		<image src="assets/images/janac-turing-pic.jpg">
 	</header>
 
 	<div>
-		<image src="assets/images/janac-turing-pic.jpg">
 	</div>
 
 	<article>	
@@ -122,6 +130,9 @@
 	  ga('send', 'pageview');
 
 	</script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+	<small>Congratulations, you have found the first hidden gem on this website. My sister thinks I look like the villain in <a href="assets\images\thandapani.jpg">this picture</a> because of how much gold I'm wearing in the picture above. </small>
 
 </body>
 </html>
