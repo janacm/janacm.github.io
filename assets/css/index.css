@@ -1,0 +1,92 @@
+header, nav, footer, article {display:block;} /*HTML5*/
+body {
+    text-align: center;
+    /*border: 10px solid #1e90ff;*/
+    background-color:#E86A1A;
+    color: white!important;
+
+}
+
+.quick {
+    border: 20px solid #00A399;   
+}
+div {
+    border: 5px;
+    margin: 5px;
+}
+
+article {
+    border: 5px;
+    margin: 5px;
+
+}
+
+/*footer*/
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+.skills{
+    border: 20px solid #00A399;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #00A399;
+}
+
+/*footer stop*/
+
+img {
+    border: 20px solid #00A399;
+    width: 25%;
+    /*height: 400px;*/
+    margin: 10px 10px 10px 10px;
+
+}
+
+nav {
+    color: blue;
+}
+
+nav {
+    background-color: #00A399!important;
+}
+
+nav li a{
+      color:white!important;
+    }
+
+small{
+    font-size: 0.09em;
+}
+
+@font-face {
+    font-family: 'Socialglyphs-Regular';
+    src: url('..\\assets\\fonts\\types\\socialglyphs-regular.eot');
+    src: url('..\\assets\\fonts\\types\\socialglyphs-regular.eot?#iefix') format('embedded-opentype'),
+         url('..\\assets\\fonts\\types\\socialglyphs-regular.woff') format('woff'),
+         url('..\\assets\\fonts\\types\\socialglyphs-regular.ttf') format('truetype'),
+         url('..\\assets\\fonts\\types\\socialglyphs-regular.svg#socialglyphs-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon{
+    font-family: Socialglyphs-Regular, sans-serif;
+    font-size:20pt;
+}
