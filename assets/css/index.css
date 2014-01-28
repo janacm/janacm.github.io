@@ -77,11 +77,11 @@ small{
 
 @font-face {
     font-family: 'Socialglyphs-Regular';
-    src: url('..\\assets\\fonts\\types\\socialglyphs-regular.eot');
-    src: url('..\\assets\\fonts\\types\\socialglyphs-regular.eot?#iefix') format('embedded-opentype'),
-         url('..\\assets\\fonts\\types\\socialglyphs-regular.woff') format('woff'),
-         url('..\\assets\\fonts\\types\\socialglyphs-regular.ttf') format('truetype'),
-         url('..\\assets\\fonts\\types\\socialglyphs-regular.svg#socialglyphs-regular') format('svg');
+    src: url('..\\fonts\\types\\socialglyphs-regular.eot');
+    src: url('..\\fonts\\types\\socialglyphs-regular.eot?#iefix') format('embedded-opentype'),
+         url('..\\fonts\\types\\socialglyphs-regular.woff') format('woff'),
+         url('..\\fonts\\types\\socialglyphs-regular.ttf') format('truetype'),
+         url('..\\fonts\\types\\socialglyphs-regular.svg#socialglyphs-regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
