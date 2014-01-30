@@ -2,13 +2,13 @@ header, nav, footer, article {display:block;} /*HTML5*/
 body {
     text-align: center;
     /*border: 10px solid #1e90ff;*/
-    background-color:#E86A1A;
+    background-color:#357EC7;
     color: white!important;
 
 }
 
 .quick {
-    border: 20px solid #00A399;   
+    border: 20px solid #C77E36;   
 }
 div {
     border: 5px;
@@ -30,7 +30,7 @@ body {
 }
 
 .skills{
-    border: 20px solid #00A399;
+    border: 20px solid #C77E36;
 }
 
 /* Wrapper for page content to push down footer */
@@ -46,16 +46,32 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
-  background-color: #00A399;
+  background-color: #A9D0F5;
 }
 
 /*footer stop*/
 
-img {
-    border: 20px solid #00A399;
+img + img + img {
+    border: 20px solid #ED7839;
     width: 25%;
     /*height: 400px;*/
-    margin: 10px 10px 10px 10px;
+    margin: 400px 10px 10px 10px;
+
+}
+
+img + img {
+    border: 20px solid #ED7839;
+    width: 25%;
+    /*height: 400px;*/
+    margin: 00px 10px 200px 10px;
+
+}
+
+img {
+    border: 20px solid #A9D0F5;
+    width: 25%;
+    /*height: 400px;*/
+    margin: 200px 10px 10px 10px;
 
 }
 
@@ -64,7 +80,8 @@ nav {
 }
 
 nav {
-    background-color: #00A399!important;
+    background-color: #357EC7!important;
+    border: 2px solid white!important;
 }
 
 nav li a{
