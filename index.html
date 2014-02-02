@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
 	<meta charset ="utf-8">
     <title>Janac Meena</title>
 </head>
@@ -47,17 +48,15 @@
 					<h4>Note: This tacky website is a work in progress</h4>
 				</hgroup>
 				<div class="">
+                    <img src="assets/images/janac-turing-pic.jpg" id="switchPic" onclick="picSwitch()"/>
 					<span>the mission</span>
-					<image src="assets/images/mygoal.jpg">
+					<!-- <image src="assets/images/mygoal.jpg"> -->
 					the man
-					<image src="assets/images/janac-turing-pic.jpg">
+					<!-- <image src="assets/images/janac-turing-pic.jpg"> -->
 					<span>the motive</span>
-					<image src="assets/images/on-roof.jpg">
+					<!-- <image src="assets/images/on-roof.jpg"> -->
 				</div>
 			</header>
-
-			<div>
-			</div>
 
 			<article class="quick">	
 				<h2>Quick Facts</h2>
@@ -103,11 +102,64 @@
  	</div>
 
     <footer> 
-    	    <div id="footer">
-    	      <div class="container">
-    	      		Copyright | Copyleft | Support | Careers | Coporate Social Responsibility </div>
-    	    </div>
+	    <div id="footer">
+	       <div class="container">
+	      		Copyright | Copyleft | Support | Careers | Coporate Social Responsibility 
+            </div>
+	    </div>
     </footer>
+
+    <script>
+    
+
+    function picSwitch(){
+        var mission ="mygoal.jpg";
+        var motive ="on-roof.jpg";
+        var man ="janac-turing-pic.jpg";
+
+        var image = document.getElementById('switchPic');
+        var imageFilename = imgFilename(image);
+        // var newSource = image.src.substring(image.lastIndexOf('/'),lastIndexOf('.'));
+
+        // alert("filename is: " + imgFilename(image) );
+        console.log("image.src: " + image.src);
+
+        if (imageFilename == man) {
+            setImgFilename(image,mission);
+        }
+
+        else if (imageFilename == mission){
+            setImgFilename(image,motive);
+        }
+
+        else if (imageFilename == motive){
+            setImgFilename(image,man);
+        }
+        else {
+            setImgFilenameNull(image);
+        }
+    }
+
+    function imgFilename(file){
+        return file.src.substring(file.src.lastIndexOf('/')+1, file.src.length);
+    }
+
+    function setImgFilename(img, newFilename){
+        // (img.src.lastIndexOf('/')+1, img.src.length
+        console.log("imgfilename: " + imgFilename(img));
+        console.log("newFilename: " + newFilename);
+
+        img.src = img.src.replace(imgFilename(img), newFilename);
+        console.log("new image src is: " + img.src)
+    }
+
+    function setImgFilenameNull(img){
+        img.src = "BANCHOT";
+    }
+
+    </script>
+    <!-- <img src="assets/images/mygoal.jpg" onclick="this.src = this.src == offImg ? onImg : offImg;"/> -->
+    
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
