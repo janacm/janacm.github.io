@@ -4,12 +4,11 @@ body {
     /*border: 10px solid #1e90ff;*/
     background-color:#357EC7;
     color: white!important;
-
 }
 
 .quick {
-    border: 20px solid #C77E36;   
 }
+
 div {
     border: 5px;
     margin: 5px;
@@ -18,7 +17,6 @@ div {
 article {
     border: 5px;
     margin: 5px;
-
 }
 
 /*footer*/
@@ -29,9 +27,6 @@ body {
   /* The html and body elements cannot have any padding or margin. */
 }
 
-.skills{
-    border: 20px solid #C77E36;
-}
 
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -46,37 +41,13 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
-  background-color: #A9D0F5;
 }
 
 /*footer stop*/
 
-img + img + img {
-    border: 20px solid #ED7839;
-    width: 25%;
-    /*height: 400px;*/
-    margin: 400px 10px 10px 10px;
-
-}
-
-img + img {
-    border: 20px solid #ED7839;
-    width: 25%;
-    /*height: 400px;*/
-    margin: 00px 10px 200px 10px;
-
-}
-
 img {
-    border: 20px solid #A9D0F5;
+    border: 20px solid orange;
     width: 25%;
-    /*height: 400px;*/
-    margin: 200px 10px 10px 10px;
-
-}
-
-nav {
-    color: blue;
 }
 
 nav {
@@ -92,3 +63,6 @@ small{
     font-size: 0.09em;
 }
 
+a {
+  color: orange;
+}
