@@ -1,12 +1,7 @@
-header, nav, footer, article {display:block;} /*HTML5*/
 body {
     text-align: center;
-    /*border: 10px solid #1e90ff;*/
     background-color:#357EC7;
     color: white!important;
-}
-
-.quick {
 }
 
 div {
@@ -19,12 +14,9 @@ article {
     margin: 5px;
 }
 
-/*footer*/
-
 html,
 body {
   height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
 }
 
 a:hover{
@@ -32,6 +24,7 @@ a:hover{
 }
 
 /* Wrapper for page content to push down footer */
+/*try this on a long page and see the difference*/
 #wrap {
   min-height: 100%;
   height: auto;
@@ -50,7 +43,9 @@ a:hover{
 
 img {
     border: 20px solid orange;
-    width: 25%;
+    border-radius: 30px;
+    width: 30%;
+    height: 60%;
 }
 
 nav {
@@ -68,4 +63,24 @@ small{
 
 a {
   color: orange;
+}
+
+#underNav{
+  float: left;
+  position: absolute;
+  /*border: 3px solid white;*/
+  font: 20pt solid white;
+}
+
+.blackout{
+  background-color: black!important;
+  color: black!important;
+}
+
+.visible{
+  visibility: visible!important;
+}
+
+.invisible{
+  visibility: hidden!important;
 }

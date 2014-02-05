@@ -10,37 +10,41 @@
 </head>
 
 <body>
-	<div id="wrap">
-		<div class="container">
-			<nav class="navbar navbar-default" role="navigation">
-			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
-			    <a class="navbar-brand" style="color: white;" href="http://www.janac.me">Janac M</a>
-			  </div>	
-
+    <div id="wrap">
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
+		            <a class="navbar-brand" style="color: white;" onmouseover="showLinkUnder('underNav','Home')" href="http://www.janac.me">Janac M</a>
+		        </div>	
 			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="nav navbar-nav">
-			      <li><a class="fa fa-github-square fa-inverse fa-2x" href="https://github.com/janacm" target="_blank"></a> </li>
-			      <li><a class="fa fa-linkedin fa-inverse fa-2x" href="http://ca.linkedin.com/pub/janac-meenachisundaram/30/96b/61/" target="_blank"> </a></li>
-                  <li><a class="fa fa-list fa-inverse fa-2x" href="assets\pdf\02-2014ResumeJanac.pdf"target="_blank"> </a></li>
-			    </ul>
-			    <ul class="nav navbar-nav navbar-right">
-			      <li><a href="about.html">About</a></li>
-			      <li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="#">Keyboard Shortcuts</a></li>
-			          <li><a href="#">Another action</a></li>
-			          <li><a href="#">Something else here</a></li>
-			          <li class="divider"></li>
-			          <li><a href="#">Separated link</a></li>
-			        </ul>
-			      </li>
-			    </ul>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a id="githubIcon" class="fa fa-github-square fa-inverse fa-2x" href="https://github.com/janacm" onmouseover="showLinkUnder('underNav','GitHub')" onmouseout="clear('underNav')" target="_blank"> </a></li>
+                        <li><a class="fa fa-linkedin fa-inverse fa-2x" href="http://ca.linkedin.com/pub/janac-meenachisundaram/30/96b/61/" onmouseover="showLinkUnder('underNav','LinkedIn')" onmouseout="clear('underNav')" target="_blank"> </a></li>
+                        <li><a class="fa fa-list fa-inverse fa-2x" href="assets\pdf\02-2014ResumeJanac.pdf" onmouseover="showLinkUnder('underNav','R&eacute;sum&eacute;')" onmouseout="clear('underNav')" target="_blank"> </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+			             <li><a href="about.html">About</a></li>
+		                 <li class="dropdown">
+    			             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+    			             <ul class="dropdown-menu">
+    			             <li><a href="#">Keyboard Shortcuts</a></li>
+    			             <li><a href="#">Another action</a></li>
+        			         <li><a href="#">Something else here</a></li>
+        			         <li class="divider"></li>
+        			         <li><a href="#">Separated link</a></li>
+    			             </ul>
+			             </li>
+			         </ul>
 			  </div><!-- /.navbar-collapse -->
 			</nav>
+
+            <div class="invisible" id="underNav">This div displays </div>
+            
+
+            <!-- <img src="assets/images/mygoal.jpg" > -->
 
 			<header>
 				<hgroup>
@@ -76,9 +80,25 @@
 	    </div>
     </footer>
 
-    <script>
-    
 
+<script type="text/javascript">
+    function clear(itemID){
+        document.getElementById('underNav').className='invisible';
+    }
+
+    function blacker(){
+        // alert();
+        document.getElementById('testDiv').className='blackout';
+    }
+    function showLinkUnder(itemID, linkname){
+        // alert("asdf");
+        // add an onmouseout to get rid of the text
+        item = document.getElementById(itemID);
+            item.className="visible";
+            item.innerHTML= linkname;
+    }
+
+// pic switcher begin
     function picSwitch(){
         var mission ="mygoal.jpg";
         var motive ="on-roof.jpg";
@@ -123,8 +143,8 @@
     function setImgFilenameNull(img){
         img.src = "PICSWITCHERROR";
     }
-
-    </script>
+// pic switcher end
+</script>
     <!-- <img src="assets/images/mygoal.jpg" onclick="this.src = this.src == offImg ? onImg : offImg;"/> -->
     
 
