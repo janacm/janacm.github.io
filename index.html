@@ -16,14 +16,36 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 		        <div class="navbar-header">
 		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
-		            <a class="navbar-brand" style="color: white;" onmouseover="showLinkUnder('underNav','Home')" href="http://www.janac.me">Janac M</a>
+		            <a class="navbar-brand" style="color: white;" onmouseover="showLinkUnder('underNav','Home')" onmouseout="clearTitle('underNav')"  href="http://www.janac.me">Janac M</a>
 		        </div>	
 			  <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a id="githubIcon" class="fa fa-github-square fa-inverse fa-2x" href="https://github.com/janacm" onmouseover="showLinkUnder('underNav','GitHub')" onmouseout="clear('underNav')" target="_blank"> </a></li>
-                        <li><a class="fa fa-linkedin fa-inverse fa-2x" href="http://ca.linkedin.com/pub/janac-meenachisundaram/30/96b/61/" onmouseover="showLinkUnder('underNav','LinkedIn')" onmouseout="clear('underNav')" target="_blank"> </a></li>
-                        <li><a class="fa fa-list fa-inverse fa-2x" href="assets\pdf\02-2014ResumeJanac.pdf" onmouseover="showLinkUnder('underNav','R&eacute;sum&eacute;')" onmouseout="clear('underNav')" target="_blank"> </a></li>
+                        <li> 
+                        <!-- Stylizing the link code like this makes it easier to read, but also increases the number of lines per tag by 5... -->
+                            <a  class="fa fa-github-square fa-inverse fa-2x"
+                                href="https://github.com/janacm" 
+                                onmouseover="showLinkUnder('underNav','GitHub')"  
+                                onmouseout="clearTitle('underNav')" 
+                                target="_blank"> 
+                            </a>
+                            </li>
+                        <li>
+                            <a  class="fa fa-linkedin fa-inverse fa-2x"
+                                href="http://ca.linkedin.com/pub/janac-meenachisundaram/30/96b/61/" 
+                                onmouseover="showLinkUnder('underNav','LinkedIn')" 
+                                onmouseout="clearTitle('underNav')" 
+                                target="_blank"> 
+                            </a>
+                        </li>
+                        <li>
+                            <a  class="fa fa-list fa-inverse fa-2x" 
+                                href="assets\pdf\02-2014ResumeJanac.pdf" 
+                                onmouseover="showLinkUnder('underNav','R&eacute;sum&eacute;')" 
+                                onmouseout="clearTitle('underNav')" 
+                                target="_blank"> 
+                            </a>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
 			             <li><a href="about.html">About</a></li>
@@ -74,22 +96,20 @@
 
     <footer> 
 	    <div id="footer">
-	       <div class="container">
-	      		Copyright | Copyleft | Support | Careers | Coporate Social Responsibility 
+            <small>Congratulations, you have found the first hidden gem on this website. My sister thinks I look like the villain in <a href="assets\images\thandapani.jpg">this picture</a> because of how much gold I'm wearing in the picture above. </small>
+            <div class="container">
+                Copyright | Copyleft | Support | Careers | Coporate Social Responsibility 
             </div>
-	    </div>
+        </div>
     </footer>
 
-
 <script type="text/javascript">
-    function clear(itemID){
-        document.getElementById('underNav').className='invisible';
+
+// link subtitler begin
+    function clearTitle(itemID){
+        document.getElementById(itemID).className='invisible';
     }
 
-    function blacker(){
-        // alert();
-        document.getElementById('testDiv').className='blackout';
-    }
     function showLinkUnder(itemID, linkname){
         // alert("asdf");
         // add an onmouseout to get rid of the text
@@ -97,6 +117,7 @@
             item.className="visible";
             item.innerHTML= linkname;
     }
+// link subtitler
 
 // pic switcher begin
     function picSwitch(){
@@ -160,7 +181,7 @@
 
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-	<small>Congratulations, you have found the first hidden gem on this website. My sister thinks I look like the villain in <a href="assets\images\thandapani.jpg">this picture</a> because of how much gold I'm wearing in the picture above. </small>
+	
 
 </body>
 </html>
