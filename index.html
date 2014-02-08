@@ -7,167 +7,19 @@
     <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
 	<meta charset ="utf-8">
     <title>Janac Meena</title>
-</head>
 
+    <style type="text/css">
+        iframe[seamless] {
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+    
 <body>
     <div id="wrap">
         <div class="container">
-            <nav class="navbar navbar-default" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		        <div class="navbar-header">
-		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
-		            <a class="navbar-brand" style="color: white;" onmouseover="showLinkUnder('underNav','Home')" onmouseout="clearTitle('underNav')"  href="http://www.janac.me">Janac M</a>
-		        </div>	
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li> 
-                        <!-- Stylizing the link code like this makes it easier to read, but also increases the number of lines per tag by 5... -->
-                            <a  class="fa fa-github-alt fa-inverse fa-2x"
-                                href="https://github.com/janacm" 
-                                onmouseover="showLinkUnder('underNav','GitHub')"  
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                            </li>
-                        <li>
-                            <a  class="fa fa-linkedin fa-inverse fa-2x"
-                                href="http://ca.linkedin.com/pub/janac-meenachisundaram/30/96b/61/" 
-                                onmouseover="showLinkUnder('underNav','LinkedIn')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-list fa-inverse fa-2x" 
-                                href="assets\pdf\02-2014ResumeJanac.pdf" 
-                                onmouseover="showLinkUnder('underNav','R&eacute;sum&eacute;')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <p class="invisible"> space </p>
-                        </li>
-                        <li>
-                            <a  class="fa fa-lightbulb-o fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Ideas')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-bar-chart-o fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','My Stats')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-plane fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Places I want to go')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-bookmark-o fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Websites I use')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-gamepad fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Games!')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-camera fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','10³ words')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-android fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Thoughts on Android')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a  class="fa fa-dollar fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Finance')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-heart-o fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        <li>
-                            <a  class="fa fa-shopping-cart fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Is it <em>really</em> a sale')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
-                        
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-			             <li><a href="about.html">About</a></li>
-
-		                 <li class="dropdown">
-    			             <a href="#" id="drop1" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects<b class="caret"></b></a>
-    			             <ul style="background-color: #357EC7;" class="dropdown-menu" role="menu" aria-labelledby="drop1">
-        			             <li>
-                                     <a  class="fa fa-flask fa-inverse fa-2x" 
-                                         href="" 
-                                         onmouseover="showLinkUnder('underNav','Experiments')" 
-                                         onmouseout="clearTitle('underNav')" 
-                                         target="_blank"> 
-                                     </a>
-                                 </li>
-            			         <li>
-                                     <a  class="fa fa-html5 fa-inverse fa-2x" 
-                                         href="" 
-                                         onmouseover="showLinkUnder('underNav','HTML5 Experiments')" 
-                                         onmouseout="clearTitle('underNav')" 
-                                         target="_blank"> 
-                                     </a>
-                                 </li>
-            			         <li><a  class="divider" href=""></a></li>
-            			         <li><a  class="fa fa-2x fa-archive fa-2x" href=""></a></li>
-                                 <li><a  class="fa fa-2x fa-linux" href=""></a></li>
-                                 <li><a  class="fa fa-2x fa-windows" href=""></a></li>
-                                 <li><a  class="fa fa-2x fa-smile-o" href=""></a></li>
-                                 <li><a  class="fa fa-2x fa-question" href=""></a></li>
-                                 <li><a  class="fa fa-2x fa-male" href=""></a></li>
-                                 <li><a  class="fa fa-2x fa-barcode" href=""></a></li>
-    			             </ul>
-			             </li>
-			         </ul>
-			  </div><!-- /.navbar-collapse -->
-			</nav>
-
+            <iframe src="nav.html" seamless></iframe>
             <div class="invisible" id="underNav">This div displays </div>
             
 
