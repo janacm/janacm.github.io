@@ -47,7 +47,10 @@
                             </a>
                         </li>
                         <li>
-                            <a  class="fa fa-plane fa-inverse fa-2x" 
+                            <p class="invisible"> space </p>
+                        </li>
+                        <li>
+                            <a  class="fa fa-lightbulb-o fa-inverse fa-2x" 
                                 href="" 
                                 onmouseover="showLinkUnder('underNav','Ideas')" 
                                 onmouseout="clearTitle('underNav')" 
@@ -102,14 +105,7 @@
                                 target="_blank"> 
                             </a>
                         </li>
-                        <li>
-                            <a  class="fa fa-html5 fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','HTML5 Experiments')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
+                        
                         <li>
                             <a  class="fa fa-dollar fa-inverse fa-2x" 
                                 href="" 
@@ -134,25 +130,38 @@
                                 target="_blank"> 
                             </a>
                         </li>
-                        <li>
-                            <a  class="fa fa-flask fa-inverse fa-2x" 
-                                href="" 
-                                onmouseover="showLinkUnder('underNav','Experiments')" 
-                                onmouseout="clearTitle('underNav')" 
-                                target="_blank"> 
-                            </a>
-                        </li>
+                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
 			             <li><a href="about.html">About</a></li>
+
 		                 <li class="dropdown">
-    			             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
-    			             <ul class="dropdown-menu">
-    			             <li><a href="#">Keyboard Shortcuts</a></li>
-    			             <li><a href="#">Another action</a></li>
-        			         <li><a href="#">Something else here</a></li>
-        			         <li class="divider"></li>
-        			         <li><a href="#">Separated link</a></li>
+    			             <a href="#" id="drop1" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects<b class="caret"></b></a>
+    			             <ul style="background-color: #357EC7;" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+        			             <li>
+                                     <a  class="fa fa-flask fa-inverse fa-2x" 
+                                         href="" 
+                                         onmouseover="showLinkUnder('underNav','Experiments')" 
+                                         onmouseout="clearTitle('underNav')" 
+                                         target="_blank"> 
+                                     </a>
+                                 </li>
+            			         <li>
+                                     <a  class="fa fa-html5 fa-inverse fa-2x" 
+                                         href="" 
+                                         onmouseover="showLinkUnder('underNav','HTML5 Experiments')" 
+                                         onmouseout="clearTitle('underNav')" 
+                                         target="_blank"> 
+                                     </a>
+                                 </li>
+            			         <li><a  class="divider" href=""></a></li>
+            			         <li><a  class="fa fa-2x fa-archive fa-2x" href=""></a></li>
+                                 <li><a  class="fa fa-2x fa-linux" href=""></a></li>
+                                 <li><a  class="fa fa-2x fa-windows" href=""></a></li>
+                                 <li><a  class="fa fa-2x fa-smile-o" href=""></a></li>
+                                 <li><a  class="fa fa-2x fa-question" href=""></a></li>
+                                 <li><a  class="fa fa-2x fa-male" href=""></a></li>
+                                 <li><a  class="fa fa-2x fa-barcode" href=""></a></li>
     			             </ul>
 			             </li>
 			         </ul>
@@ -274,8 +283,8 @@
 	  ga('create', 'UA-47416207-1', 'janac.me');
 	  ga('send', 'pageview');
 	</script>
-
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
 
 	
 

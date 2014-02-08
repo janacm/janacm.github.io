@@ -23,6 +23,9 @@ a:hover{
   background-color: #1e90ff!important;
 }
 
+a:visited{
+  background-color: #1e90ff!important;
+}
 /* Wrapper for page content to push down footer */
 /*try this on a long page and see the difference*/
 #wrap {
