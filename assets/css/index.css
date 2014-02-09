@@ -87,3 +87,8 @@ a {
 .invisible{
   visibility: hidden!important;
 }
+
+iframe[seamless] {
+    border: none;
+    width: 100%;
+}
