@@ -5,15 +5,30 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
     <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
+    <script src="assets/js/jquery-1.11.0.js"></script>
 	<meta charset ="utf-8">
     <title>Janac Meena</title>
 
-</head>
+    <script type="text/javascript">
+        if (window.jQuery) {  
+            alert("works");
+        }else {
+            alert("brokes");
+        }
+    </script>
+
+    <script> 
+        $(function(){
+          $("#includedContent").load("http://www.janac.me/nav.html"); 
+        });
+    </script> 
+
     
 <body>
     <div id="wrap">
         <div class="container">
-            <iframe src="nav.html" seamless></iframe>
+            <!-- <iframe src="nav.html" seamless></iframe> -->
+            <div id="includedContent"></div>
             <div class="invisible" id="underNav">This div displays </div>
             
 
@@ -129,7 +144,7 @@
 	  ga('create', 'UA-47416207-1', 'janac.me');
 	  ga('send', 'pageview');
 	</script>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    
 	<script src="assets/js/bootstrap.js"></script>
 
 	
