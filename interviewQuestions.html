@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Questions</title>
+    <script>
+        function stringReverse(word){
+            box = document.getElementById('box1');
+            i = word.length;
+            reversedString ="";
+            while (i >= 0){
+                reversedString += word.charAt(i);
+                i--;
+            }
+            box.innerHTML = reversedString;
+        }
+    </script>
+</head>
+<body>
+    <h1> This is my attempt at answering interview questions using JS </h1>
+    <h2> Morgan Stanley </h2>
+    <strong> Question:</strong><em> Write a method for reversing a string </em>
+    <form>
+        <input type="text" id="stringInput" placeholder="mr owl ate my metal worm"> 
+        <button type="button" onclick="stringReverse(stringInput.value)">Submit</button>
+    </form>
+    <div id="box1"></div>
+</body>
+</html>

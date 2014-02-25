@@ -1,0 +1,6 @@
+ideas.txt
+
+-rapgenius style annotations for textbooks
+--but u can't put textbooks up for free
+--make them part of the textbook's online pay-website
+--but they don't need to do this
