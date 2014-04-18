@@ -44,12 +44,14 @@ a:visited{
 
 /*footer stop*/
 
-img {
+#switchPic{
     border: 20px solid orange;
     border-radius: 30px;
     width: 30%;
     height: 60%;
+    float: left;
 }
+
 
 nav {
     background-color: #357EC7!important;
@@ -97,4 +99,13 @@ a {
 iframe[seamless] {
     border: none;
     width: 100%;
+}
+
+#quickFacts{
+  text-align: left;
+  float: right;
+  position: relative;
+  top: 14px;
+  font-size: 17px;
+  line-height: 30pt;  
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
     <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
-    <script src="assets/js/jquery-1.11.0.js"></script>
 	<meta charset ="utf-8">
     <title>Janac Meena</title>
 
@@ -18,12 +18,13 @@
     </script>
 
     <script> 
-        $(function(){
-          $("#includedContent").load("nav.html"); 
+        $(document).ready(function(){
+            $("#includedContent").load("nav.html", function() {
+                console.log( "Load was performed." );
+            })
         });
     </script> 
 
-    
 <body>
     <div id="wrap">
         <div class="container">
@@ -34,7 +35,7 @@
 			<header>
 				<hgroup>
 					<h1>Janac Meena</h1>
-					<h4>Note: This tacky website is a work in progress</h4>
+					<!-- <em>Note: This tacky website is a work in progress</em> -->
 				</hgroup>
 				<div class="">
                     <img src="assets/images/janac-turing-pic.jpg" id="switchPic" onclick="picSwitch()"/>
@@ -42,15 +43,24 @@
 			</header>
 
 			<article class="quick">	
-				<h2>Quick Facts</h2>
-				<ul style="list-style-type: none;">	
-					<li>I'm a 20 year old software engineering student at uOttawa
-					<li>I currently (Feb 2014) work as a web developer at my university, and as a mobile developer for Health Canada
-					<li>I'm extremely organized and scheduled. I'm obssessive over productivity and time-management
-					<li>My thoughts revolve around technology, relationships, business, controversies, philosophy, psychology
-					<li>I get excited by martial arts, genuine advice, meeting people, partying and doing something for the first time
-                    <li>I am fascinated by psychology, religion, the cosmos, and compound interest</li>
-					<li>I have faith in humanity, especially because of <a href="assets/images/SalmanKhan.jpg">this guy</a>
+				<!-- <h2>Quick Facts</h2> -->
+				<ul id="quickFacts" style="list-style-type: ;">	
+					<li>20 years old 
+                    <li>Software engineering student at uOttawa
+					<li>Obssessive over productivity and time-management <br>
+					<li>Talks about:
+                        <ul>
+                            <li>Technology, relationships, business, controversies, philosophy, psychology</li>
+                        </ul>
+					<li>Excited by
+                        <ul>
+                            <li>Martial arts, genuine advice, meeting people, partying and doing something for the first time</li>
+                        </ul>
+                    <li>Fascinated by 
+                        <ul>
+                            <li>Psychology, religion, the cosmos, and compound interest</li>
+                        </ul>
+					<li>Inspired by <a href="assets/images/SalmanKhan.jpg">this guy</a></li>
                     <li>Click the picture if you haven't already done so</li>
 				</ul>
 			</article>
@@ -58,7 +68,6 @@
  	</div>
 
 <!-- Counter Code START -->
-<img src="http://www.e-zeeinternet.com/count.php?page=1046321&style=big_block&nbdigits=5&reloads=1" alt="HTML Hit Counter" border="0">
     <footer> 
 	    <div id="footer">
             <small>Congratulations, you have found the first hidden gem on this website. My sister thinks I look like the villain in <a href="assets\images\thandapani.jpg">this picture</a> because of how much gold I'm wearing in the picture above. </small>
@@ -68,7 +77,7 @@
         </div>
     </footer>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
 // link subtitler begin
     function clearTitle(itemID){
@@ -144,7 +153,7 @@
 	  ga('send', 'pageview');
 	</script>
     
-	<script src="assets/js/bootstrap.js"></script>
+	
 
 	
 
