@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+    <title>Q1</title>
+    
+</head>
+<body>
+    <header>
+        <div>
+            <!-- <h1>1</h1>
+            <h3>a)</h3> -->
+            <p>Check if all characters in a given string are unique</p>
+            <input type="text" id="stringInput" placeholder="enter string!"/> 
+            <button onclick="uniqueChecker1()">Click</button>
+        </div>
+    </header>
+
+</body>
+
+<script type="text/javascript">
+
+    /* 
+        1. Copy all characters into a char array
+        2. Sort array
+        3. Check if array[i] == array[i+1]
+    */
+    function uniqueChecker1(){
+        var givenString = document.getElementById('stringInput').value;
+        var chars = new Array(givenString.length); 
+        var isUnique = true;
+
+        for (var i=0; i<givenString.length; i++){
+            chars[i] = givenString.charAt(i);
+        }
+
+        chars.sort();
+
+        for (var j=0; j<chars.length-1; j++){
+            if (chars[j] == chars[j+1]){
+                isUnique = false;
+            }
+        }
+
+        alert(isUnique);
+        console.log("function completed");
+    }
+
+    /*
+    
+    */
+    function uniqueChecker2(){
+
+    }
+    document.writeln("String is unique:");
+    // document.writeln(uniqueChecker1(notUnique));
+</script>
+</html>
