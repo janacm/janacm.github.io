@@ -26,122 +26,10 @@
     </script> 
 
 <body>
-    <div id="wrap">
-        <div class="container">
-            <!-- <iframe src="nav.html" seamless></iframe> -->
-            <div id="includedContent"></div>
-            <div class="invisible" id="underNav">This div displays </div>
-            
-			<header>
-				<hgroup>
-					<h1>Janac Meena</h1>
-					<!-- <em>Note: This tacky website is a work in progress</em> -->
-				</hgroup>
-				<div class="">
-                    <img src="assets/images/janac-turing-pic.jpg" id="switchPic" onclick="picSwitch()"/>
-				</div>
-			</header>
-
-			<article class="quick">	
-				<!-- <h2>Quick Facts</h2> -->
-				<ul id="quickFacts" style="list-style-type: ;">	
-					<li>20 years old 
-                    <li>Software engineering student at uOttawa
-					<li>Obssessive over productivity and time-management <br>
-					<li>Talks about:
-                        <ul>
-                            <li>Technology, relationships, business, controversies, philosophy, psychology</li>
-                        </ul>
-					<li>Excited by
-                        <ul>
-                            <li>Martial arts, genuine advice, meeting people, partying and doing something for the first time</li>
-                        </ul>
-                    <li>Fascinated by 
-                        <ul>
-                            <li>Psychology, religion, the cosmos, and compound interest</li>
-                        </ul>
-					<li>Inspired by <a href="assets/images/SalmanKhan.jpg">this guy</a></li>
-                    <li>Click the picture if you haven't already done so</li>
-				</ul>
-			</article>
-	    </div>
- 	</div>
-
-<!-- Counter Code START -->
-    <footer> 
-	    <div id="footer">
-            <small>Congratulations, you have found the first hidden gem on this website. My sister thinks I look like the villain in <a href="assets\images\thandapani.jpg">this picture</a> because of how much gold I'm wearing in the picture above. </small>
-            <div class="container">
-                Copyright | Copyleft | Support | Careers | Coporate Social Responsibility 
-            </div>
-        </div>
-    </footer>
-
-    <script type="text/javascript">
-
-// link subtitler begin
-    function clearTitle(itemID){
-        document.getElementById(itemID).className='invisible';
-    }
-
-    function showLinkUnder(itemID, linkname){
-        // alert("asdf");
-        // add an onmouseout to get rid of the text
-        item = document.getElementById(itemID);
-            item.className="visible";
-            item.innerHTML= linkname;
-    }
-// link subtitler
-
-// pic switcher begin
-    function picSwitch(){
-        var mission ="mygoal.jpg";
-        var motive ="on-roof.jpg";
-        var man ="janac-turing-pic.jpg";
-
-        var image = document.getElementById('switchPic');
-        var imageFilename = imgFilename(image);
-        // var newSource = image.src.substring(image.lastIndexOf('/'),lastIndexOf('.'));
-
-        // alert("filename is: " + imgFilename(image) );
-        console.log("image.src: " + image.src);
-
-        if (imageFilename == man) {
-            setImgFilename(image,mission);
-        }
-
-        else if (imageFilename == mission){
-            setImgFilename(image,motive);
-        }
-
-        else if (imageFilename == motive){
-            setImgFilename(image,man);
-        }
-        else {
-            setImgFilenameNull(image);
-        }
-    }
-
-    function imgFilename(file){
-        return file.src.substring(file.src.lastIndexOf('/')+1, file.src.length);
-    }
-
-    function setImgFilename(img, newFilename){
-        // (img.src.lastIndexOf('/')+1, img.src.length
-        console.log("imgfilename: " + imgFilename(img));
-        console.log("newFilename: " + newFilename);
-
-        img.src = img.src.replace(imgFilename(img), newFilename);
-        console.log("new image src is: " + img.src)
-    }
-
-    function setImgFilenameNull(img){
-        img.src = "PICSWITCHERROR";
-    }
-// pic switcher end
-</script>
-    <!-- <img src="assets/images/mygoal.jpg" onclick="this.src = this.src == offImg ? onImg : offImg;"/> -->
-    
+	<h1 class="overlayText" id="fname">JANAC</h1>
+	<h1 class="overlayText" id="lname">MEENA</h1>
+	<a href="homePage.html" id="enter">Enter</a>
+    <img src="assets/images/me.jpg" id="mainpic">
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -152,10 +40,5 @@
 	  ga('create', 'UA-47416207-1', 'janac.me');
 	  ga('send', 'pageview');
 	</script>
-    
-	
-
-	
-
 </body>
 </html>

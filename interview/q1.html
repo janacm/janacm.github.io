@@ -16,6 +16,7 @@
             <p>Check if all characters in a given string are unique</p>
             <input type="text" id="stringInput" placeholder="enter string!"/> 
             <button onclick="uniqueChecker1()">Click</button>
+            <button onclick="uniqueChecker2()">No sort method</button>
         </div>
     </header>
 
@@ -45,17 +46,39 @@
             }
         }
 
-        alert(isUnique);
-        console.log("function completed");
+        // alert(isUnique);
+        console.log(isUnique);
+        // console.log("function completed");
     }
 
-    /*
     
-    */
+    // * No data structure
+    // * No Java API method calls
+   	
+	
+	// BEST: put them in buckets
+	// 1. extract j
+	// assumption is that indicies are created on the fly
+    
     function uniqueChecker2(){
-
+    	var givenString = document.getElementById('stringInput').value;
+        var isUnique = true;
+        var currentIndex = 0;
+        var currentChar;
+        var hashMap;
+        while (currentIndex < givenString.length){
+        	currentChar = givenString.charAt(currentIndex);
+        	currentIndex++;
+        	if (HashMap.get(currentChar) == true) {
+        		isUnique = false;
+        		currentIndex = givenString.length;
+        	} else {
+        		HashMap.put(currentChar, true);
+        	}
+        }
+        alert(isUnique);
     }
-    document.writeln("String is unique:");
+    // document.writeln("String is unique:");
     // document.writeln(uniqueChecker1(notUnique));
 </script>
 </html>
