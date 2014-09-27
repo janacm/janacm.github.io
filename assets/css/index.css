@@ -38,8 +38,8 @@ a:visited{
 }
 
 /*footer stop*/
-img#mainpic{
-  width: 100%;
+/*img#mainpic{
+  width: 100%;*/
   /*width: 124%;
   position: relative;
   right: 12%;*/
@@ -139,4 +139,9 @@ iframe[seamless] {
   left: 48%;
   top: 3%;
   font-size: 170%
+}
+
+.indexPic{
+  position: absolute;
+  
 }

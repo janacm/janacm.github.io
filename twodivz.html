@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	#boss{
+		position: relative;
+		/*display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;*/
+	}
+
+	#left{
+		width:25%;
+		margin: auto;  
+		position: absolute;
+		left:0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border: 10px solid blue;
+	}
+	#right{
+		border: 10px solid red;
+		width:25%;
+		margin: auto;  
+		position: absolute;
+		left:0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	#onTop{
+		position: absolute;
+		border: 10px solid green;
+		width:35%;
+	}
+</style>
+<body>
+	<div id="boss">
+		<div id="onTop"></div>
+		<div id="left"></div>
+		<div id="right"></div>
+	</div>
+</body>
+</html>
