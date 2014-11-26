@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- BASIC ABOUT PAGE -->
+<!-- Parallax comes later... -->
+
+
+<html>
+  
+  
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   - - -                        HEAD                                     - - -
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <head>
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Document Interpretation
+     - - - - - - - - - - - - - - - - - - - -->
+     <meta http-equiv="Content-Type"     content="text/html; charset=UTF-8">
+     <meta http-equiv="Content-Language" content="en-ca">
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Page Attributes
+     - - - - - - - - - - - - - - - - - - - -->
+    <title>About The Issue</title>
+    <meta name="Author"                 content="Team, The">
+    <meta name="Description" lang="en"  content="Information page for the Landmine Incident Tracker.">
+    <meta name="Keywords"    lang="en"  content="Landmine, Landmines, Incident Report, Demining Effort">
+    <link rel="icon"             type="image/x-icon" href="images/favicon.ico"-->
+    <link rel="apple-touch-icon" type="image/png" href="images/favicon.png"-->
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Stylesheets
+     - - - - - - - - - - - - - - - - - - - -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+  </head>
+  
+  
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   - - -                        BODY                                     - - -
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <body>
+    
+    
+    <div id="not-footer">
+	
+	
+			<!-- - - - - - - - - - - - - - - - - - - -
+			 Header
+			 - - - - - - - - - - - - - - - - - - - -->
+		
+			<header>
+				<nav class="navbar navbar-custom navbar-fixed-top container-fluid" role="navigation">
+				  
+          <!-- Title and Toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <!-- Title -->
+            <a id="HomeBtn" href="home.html" class="navbar-brand">
+              <img src="images/logo.png" alt="Landmine Tracker" width="200px">
+            </a>
+            <!-- Three-Bar Togle Button (for mobile) -->
+            <button type="button" class="navbar-toggle navbar-toggle-custom" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+            </button>
+          </div>
+        
+          <!-- Other Content (which is toggled) -->
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a id="MapBtn" href="map.html">View Map</a></li>
+              <li><a id="AboutBtn" href="about-static.html" class="active">About the Issue</a></li>  <!-- hardcoded .active -->
+              <li><a id="ContactBtn" href="contact-static.html">Contact Agencies</a></li>
+              <li><a id="DownloadBtn"
+                     href="https://landmine.firebaseio.com/.json?print=pretty&download=landmine_tracker-data_export.json"
+                  >Download Data</a></li>
+            </ul>
+          </div>
+          
+				</nav>
+			</header>
+		
+		
+			<!-- - - - - - - - - - - - - - - - - - - -
+			 Content
+			 - - - - - - - - - - - - - - - - - - - -->
+		 
+			<div id="AJAX-swap-content" class="container-fluid">  <!-- enable AJAX switching -->
+				<div class="col-md-8 col-md-offset-2">
+				
+					<div style="background-color: rgba(222, 222, 222, 0.9); border: 1px solid #000; border-radius: 5px; padding: 15px 30px 30px; margin-top: 45px;">
+						<h2> The Issues </h2>
+						<blockquote>
+							Landmines are unaffected by cease-fires or peace. The only way to deactivate them is by individual 
+							removal at a cost of US$300–1000 per mine. Even with training, mine disposal experts expect that for 
+							every 5000 mines cleared one worker will be killed and two workers will be injured by accidental explosions. 
+							<sup><a href="http://www.un.org/en/globalissues/demining/">[1]</a></sup>
+						</blockquote>
+					
+						<h2>Estimated extent of mine contamination in affected states as of October 2013</h2>
+					
+						<div class="row">
+							<div class="col-md-6">
+								<!-- Table showing very heavy contamination -->
+								<table class="renderedtable"  border="1" cellpadding="2" cellspacing="0"  width="292">
+									<tr>
+										<td valign="top">
+											<a name="eztoc493755_0_0_0_1" id="eztoc493755_0_0_0_1"></a><h5><strong>States with very heavy contamination  (more than 100km2)</strong></h5>
+										</td>
+									</tr>
+									<tr>  <td valign="top"> <strong>Afghanistan</strong> </td>                      </tr>
+									<tr>  <td valign="top"> <strong>Angola</strong> </td>                           </tr>
+									<tr>  <td valign="top"> <strong>Bosnia and Herzegovina</strong> </td>           </tr>
+									<tr>  <td valign="top"> <strong>Cambodia</strong> </td>                         </tr>
+									<tr>  <td valign="top"> <strong>Chad</strong> </td>                             </tr>
+									<tr>  <td valign="top"> <strong>Croatia</strong> </td>                          </tr>
+									<tr>  <td valign="top"> <strong>Iran</strong> </td>                             </tr>
+									<tr>  <td valign="top"> <strong>Iraq</strong> </td>                             </tr>
+									<tr>  <td valign="top"> <strong>Morocco <i>(Western Sahara)</i></strong> </td>  </tr>
+									<tr>  <td valign="top"> <strong>Thailand</strong> </td>                         </tr>
+									<tr>  <td valign="top"> <strong>Turkey</strong> </td>                           </tr>
+								</table>
+							</div>
+
+							<!-- Table showing heavy contamination -->
+							<div class="col-md-6">
+								<table class="renderedtable"  border="1" cellpadding="2" cellspacing="0"  width="292">
+									<tr>
+										<td valign="top">
+											<a name="eztoc493755_0_0_0_2" id="eztoc493755_0_0_0_2"></a><h5><strong>States with heavy contamination (10–100km2)</strong></h5>
+										</td>
+									</tr>
+									<tr>  <td valign="top"> <strong>Algeria</strong> </td>                                 </tr>
+									<tr>  <td valign="top"> <strong>Colombia</strong> </td>                                </tr>
+									<tr>  <td valign="top"> <strong>Chile</strong> </td>                                   </tr>
+									<tr>  <td valign="top"> <strong>Democratic Republic of the Congo (DRC)</strong> </td>  </tr>
+									<tr>  <td valign="top"> <strong>Egypt</strong> </td>                                   </tr>
+									<tr>  <td valign="top"> <strong>Eritrea</strong> </td>                                 </tr>
+									<tr>  <td valign="top"> <strong>Lao PDR</strong> </td>                                 </tr>
+									<tr>  <td valign="top"> <strong>Libya</strong> </td>                                   </tr>
+									<tr>  <td valign="top"> <strong>Mauritania</strong> </td>                              </tr>
+									<tr>  <td valign="top"> <strong>Myanmar</strong> </td>                                 </tr>
+									<tr>  <td valign="top"> <strong>Russia</strong> </td>                                  </tr>
+									<tr>  <td valign="top"> <strong>Somalia(Somaliland)</strong> </td>                     </tr>
+									<tr>  <td valign="top"> <strong>South Sudan</strong> </td>                             </tr>
+									<tr>  <td valign="top"> <strong>Sudan</strong> </td>                                   </tr>
+									<tr>  <td valign="top"> <strong>Sri Lanka</strong> </td>                               </tr>
+									<tr>  <td valign="top"> <strong>Vietnam</strong> </td>                                 </tr>
+									<tr>  <td valign="top"> <strong>Yemen</strong> </td>                                   </tr>
+									<tr>  <td valign="top"> <strong>Zimbabwe </strong> </td>                               </tr>
+								</table>
+							</div>                
+						</div>
+
+						<!-- Blurb about landmines -->
+						<blockquote>
+							Mine action is not just about landmines. In many countries, unexploded ordnance, or UXO, poses an even greater 
+							threat to people's safety. UXO comprises bombs, mortars, grenades, missiles or other devices that fail to detonate 
+							as designed but remain volatile and can kill if touched or moved. Some of the main sources of UXO are cluster bombs. 
+							Today, mine-action programmes typically address problems of landmines, UXO and "explosive remnants of war," which 
+							includes UXO and "abandoned ordnance," or weapons and remnant Improvised Explosive Devices (IEDs) left behind by armed 
+							forces when they leave an area.<sup><a href="http://www.mineaction.org/issues">[2]</a></sup>
+						</blockquote>
+					</div>  <!-- .divContent -->
+	
+					<div style="background-color: rgba(222, 222, 222, 0.9); border: 1px solid #000; border-radius: 5px; padding: 15px 30px 30px; margin-top: 45px;">
+						<h2>Landmines are used for...</h2>
+
+						<strong>Defending Military Positions: </strong>
+						<blockquote>Warring groups use land mines to provide additional protection for their forces and positions.</blockquote>
+
+						<strong>Channeling Movement:</strong>
+						<blockquote>Land mines are often used to prevent people and vehicles from moving through certain areas, and to channel them on 
+						to certain routes from which they can not deviate.</blockquote>
+		
+
+						<strong>Defending Socioeconomic Targets:</strong>
+						<blockquote>The most common use of mines in civil conflicts is to protect economic and social targets such as bridges, dams, oil, 
+						gas and water pipelines and railroad stations from attack or sabotage by the enemy.</blockquote>
+
+						<strong>Causing Chaos, Terror and Economic Dislocation:</strong>
+						<blockquote>Increasingly over the last two decades, land mines have come to serve 
+						not only as military but as political weapons. Many parties to civil conflicts have sought to instill a sense of dissatisfaction 
+						in the civilian population, based on the perceived impotence of the government to protect them from mine casualties. In addition, 
+						by laying mines in agricultural fields and plantations, around irrigation systems, in forests necessary for firewood, and in 
+						villages themselves, groups of combatants have succeeded in driving large numbers of civilians out of rural areas and into large 
+						cities and towns, adding enormously to thesocial and economic burdens of those in control of the cities.</blockquote>
+					</div> <!-- divContent -->
+
+					<div style="background-color: rgba(222, 222, 222, 0.9); border: 1px solid #000; border-radius: 5px; padding: 15px 30px 30px; margin-top: 45px;">
+						<h2> The Stats </h2>
+						<h3 class="text-center"> Casualties by Explosive Type </h3>
+						<img class="text-center" src="http://www.the-monitor.org/lm/2013/img/95394.png" />
+						<blockquote></blockquote>
+						<strong>There are three general types of antipersonnel land mines:</strong>
+						<blockquote> 
+							<strong>Explosive blast effect AP Land Mines: "Irresistable to Children"</strong>
+							These are the most commonly found antipersonnel land mines, designed to rip off the lower half of the leg and project shoe, 
+							dirt and bone higher up into the leg, causing secondary infection and higher amputation. They are sold for as little as $3 each. 
+							One type of explosive blast effect AP mine is the "butterfly" mine, commonly found in Afghanistan. These have a combination of odd 
+							shape and bright color that seems irresistible to children.
+						</blockquote>
+						<blockquote>                  
+							<strong>FRAGMENTATION AP Land Mines: Death from 50 Meters</strong>
+							Most of these mines have metal casings designed to rupture into fragments upon the detonation of the mine, or are stuffed with ball 
+							bearings, flechettes (tiny metal darts), or metal fragments that are turned into lethal projectiles by the detonation of the mine. 
+							They can cause extensive damage to the legs, stomach and chest. Most AP mines shoot their fragments within a 60° horizontal arc and a 
+							2 meter vertical height and can kill up to 50 meters from the mine.
+						</blockquote>
+						<blockquote>
+							<strong>BOUNDING AP Mines: "Bouncing Betties"</strong>
+							Perhaps the most deadly of all AP land mines are the bounding fragmentation land mines, or "bouncing betties." These mines are 
+							generally triggered by as little as 1.5kg of pressure on trip wires and/or direct pressure. Once triggered, a first charge lifts 
+							the mine up to waist height before fully detonating. Upon detonation, the explosion shoots out metal fragments in a 360-degree 
+							horizontal arc. These fragments can kill up to 35 meters or more from the land mine, and severe injuries at more than 100 meters.
+						</blockquote>
+					</div>   <!-- .divContent -->
+
+					<div style="background-color: rgba(222, 222, 222, 0.9); border: 1px solid #000; border-radius: 5px; padding: 15px 30px 30px; margin-top: 45px; height: 280px;">
+						<div class="col-md-6">
+							<h3 class="text-center"> Casualties by Profession </h3>
+							<img class="text-center" src="http://www.the-monitor.org/lm/2013/img/95209.png" />
+						</div>
+						<div class="col-md-6">
+							<h3 class="text-center"> Casualties by Age </h3>
+							<img class="text-center" src="http://www.the-monitor.org/lm/2013/img/92712.png" />
+						</div>  
+					</div>
+
+				</div> <!-- end of centered column -->
+			</div> <!-- end of AJAX swappie-goodness -->
+		  
+		  
+		</div>  <!-- /#not-footer -->
+    
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Footer
+     - - - - - - - - - - - - - - - - - - - -->
+    
+		<footer>
+			<p>Team, The</p>
+		</footer>
+		
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Scripts
+     - - - - - - - - - - - - - - - - - - - -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!--script type='text/javascript' src="convertToCSV.js"></script--!>
+    
+    
+  </body>
+  
+  
+</html>
+
+
+<!-- EOF -->

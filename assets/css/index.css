@@ -3,7 +3,9 @@ body {
     background-color: black;
     color: white!important;
 }
-
+#backgroundMainPic{
+  width: 30%;
+}
 article {
  /*   border: 5px;
     margin: 5px;*/
@@ -15,7 +17,12 @@ body {
 }
 
 a:hover{
-  background-color: #1e90ff!important;
+  /*color: #1e90ff!important;*/
+  text-decoration: none;
+}
+
+#first:hover{
+  color: red!important;
 }
 
 a:visited{

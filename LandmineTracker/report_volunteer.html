@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landmine Incident Report</title>
+	  
+    <link rel="icon"             type="image/x-icon" href="images/favicon.ico"-->
+    <link rel="apple-touch-icon" type="image/png" href="images/favicon.png"-->
+  
+    <!-- jQuery -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!-- Angular CDN -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <!-- Firebase CDN -->
+    <script src="http://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    <!-- AngularFire CDN -->
+    <script src="http://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+
+    <script type="text/javascript" src="scripts/data.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+</head>
+
+<body>
+    <div id="not-footer">
+		
+			<!-- - - - - - - - - - - - - - - - - - - -
+			 Header
+			 - - - - - - - - - - - - - - - - - - - -->
+		
+			<header>
+				<nav class="navbar navbar-custom navbar-fixed-top container-fluid" role="navigation">
+				  
+          <!-- Title and Toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <!-- Title -->
+            <a id="HomeBtn" href="home.html" class="navbar-brand">
+              <img src="images/logo.png" alt="Landmine Tracker" width="200px">
+            </a>
+            <!-- Three-Bar Togle Button (for mobile) -->
+            <button type="button" class="navbar-toggle navbar-toggle-custom" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+            </button>
+          </div>
+        
+          <!-- Other Content (which is toggled) -->
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a id="MapBtn" href="map.html">View Map</a></li>
+              <li><a id="AboutBtn" href="about-static.html">About the Issue</a></li>
+              <li><a id="ContactBtn" href="contact-static.html">Contact Agencies</a></li>
+              <li><a id="DownloadBtn"
+                     href="https://landmine.firebaseio.com/.json?print=pretty&download=landmine_tracker-data_export.json"
+                  >Download Data</a></li>
+            </ul>
+          </div>
+          
+				</nav>
+			</header>
+		
+		
+		<div id="AJAX-swap-content">
+			<!-- <pre>{{Locations}}</pre> -->
+		
+			</div> 
+			<div class="container">
+				<div class="col-md-8 col-md-offset-2 loginSec">  
+					<header>
+							<h1>Landmine Incident Report - Volunteer</h1>
+					</header>
+					<div class="col-md-8 col-md-offset-2">
+							<form id="volunteer">
+									<!-- IDEA: We should only collect data which people would want to filter by -->
+								
+									<label  class="control-label">Accident Location - Country</label>
+									<input id="country_a" type="date" class="form-control">
+									<span class="help-block">Enter the country where the accident happened</span>
+
+									<label  class="control-label">Accident Location - City</label>
+									<input id="city_a" type="text" class="form-control">
+									<span class="help-block">Enter the city where the accident happened</span>
+
+									<label class="control-label" >Date Injured</label>
+									<input id="dateInjured" type="date" class="form-control">
+									<span class="help-block">Enter the date of accident.</span>
+
+									<label  class="control-label">Diagnostic Location - Country</label>
+									<input id="country_d" type="text" class="form-control">
+									<span class="help-block">Enter the country where the person was diagnosed</span>
+
+									<label  class="control-label">Diagnostic Location - City</label>
+									<input id="city_d" type="text" class="form-control">
+									<span class="help-block">Enter the city where the person was diagnosed</span>
+
+									<label class="control-label" >Date Diagnosed</label>
+									<input id="dateDiagnosed" type="date" class="form-control">
+									<span class="help-block">If victim was deceased on arrival, please enter date the patient was found</span>
+
+									<label class="control-label">Injury</label>
+									<input id="injury" type="text" class="form-control" placeholder="Unknown/Skip">
+
+									<br>
+									<label class="control-label">Prognosis</label>
+									<input id="prognosis"type="text" class="form-control" placeholder="Unknown/Skip">
+
+									<br>
+
+									<label  class="control-label">Age</label>
+									<input id="age" type="number" class="form-control" placeholder="Unknown/Skip" min="0">
+									<span class="help-block">Age of the victim</span>
+
+									<label  class="control-label">Gender</label>
+									<br>
+									<select id="gender" class="form-control">
+											<option>Unknown</option>
+											<option>Other</option>
+											<option>Male</option>
+											<option>Female</option>
+									</select>
+									<br> 
+
+									<label class="control-label">Type of Explosive</label>
+									<br>
+									<select id="typeofexplosive" class="form-control">
+											<option>Unknown</option>
+											<option>Landmine</option>
+											<option>IED</option>
+											<option>Other</option>
+									</select>
+									<br>
+
+									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Submit</button>
+							</form>
+					</div>
+				</div>  
+			</div>
+		</div>
+  </div>  <!-- /#not-footer -->
+  <footer>
+		<p>Team, The</p>
+  </footer>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Confirm Submission</h4>
+        </div>
+        <div class="modal-body">
+          <p>The data you have provided us with will be used by statistician to help civilians avoid life threatening injuries. We will adjust for inaccuracies, but please try to be as accurate as possible. </p>
+          <p>Thank you for your submission.</p>
+        </div>
+        <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Edit Submission</button>
+	        <button type="button" class="btn btn-primary" onclick="pushIncidentToDB(redirectToHome)">Confirm Submission</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+
+  <!-- custom javascript -->
+  <script type="text/javascript" src="scripts/report.js"></script>
+
+</body>
+	
+</html>

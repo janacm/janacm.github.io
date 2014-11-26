@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- MAP PAGE -->
+
+
+<html>
+  
+  
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   - - -                        HEAD                                     - - -
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <head>
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Document Interpretation
+     - - - - - - - - - - - - - - - - - - - -->
+     <meta http-equiv="Content-Type"     content="text/html; charset=UTF-8">
+     <meta http-equiv="Content-Language" content="en-ca">
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Page Attributes
+     - - - - - - - - - - - - - - - - - - - -->
+    <title>Incident Map</title>
+    <meta name="Author"                 content="Team, The">
+    <meta name="Description" lang="en"  content="Map of Reported Incidents page for the Landmine Incident Tracker.">
+    <meta name="Keywords"    lang="en"  content="Landmine, Landmines, Map, Demining Effort, Incident Tracking">
+    <link rel="icon"             type="image/x-icon" href="images/favicon.ico"-->
+    <link rel="apple-touch-icon" type="image/png" href="images/favicon.png"-->
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Stylesheets
+     - - - - - - - - - - - - - - - - - - - -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/map.css">
+    <link rel="stylesheet" type="text/css" href="styles/slider.css">
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Scripts
+     - - - - - - - - - - - - - - - - - - - -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization"> </script>
+    <script type="text/javascript" src="scripts/map.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-slider.js"></script>
+    
+  </head>
+  
+  
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   - - -                        BODY                                     - - -
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <body>
+  
+  
+    <div id="not-footer">
+  
+  
+      <!-- - - - - - - - - - - - - - - - - - - -
+       Header
+       - - - - - - - - - - - - - - - - - - - -->
+    
+			<header>
+				<nav class="navbar navbar-custom navbar-fixed-top container-fluid" role="navigation">
+				  
+          <!-- Title and Toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <!-- Title -->
+            <a id="HomeBtn" href="home.html" class="navbar-brand">
+              <img src="images/logo.png" alt="Landmine Tracker" width="200px">
+            </a>
+            <!-- Three-Bar Togle Button (for mobile) -->
+            <button type="button" class="navbar-toggle navbar-toggle-custom"
+                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+            </button>
+          </div>
+        
+          <!-- Other Content (which is toggled) -->
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a id="MapBtn" href="map.html" class="active">View Map</a></li>  <!-- hardcoded .active -->
+              <li><a id="AboutBtn" href="about-static.html">About the Issue</a></li>
+              <li><a id="ContactBtn" href="contact-static.html">Contact Agencies</a></li>
+              <li><a id="DownloadBtn"
+                     href="https://landmine.firebaseio.com/.json?print=pretty&download=landmine_tracker-data_export.json"
+                  >Download Data</a></li>
+            </ul>
+          </div>
+          
+				</nav>
+			</header>
+    
+    
+      <!-- - - - - - - - - - - - - - - - - - - -
+       Content
+       - - - - - - - - - - - - - - - - - - - -->
+    
+      <div id="AJAX-swap-content">  <!-- enable AJAX switching -->
+          <div id="textBottom">
+            <div id="filterBox">
+            <label class="control-label">Age</label>
+            <br>
+            <b>0</b>&nbsp;&nbsp;
+            <input class="filterSlider" id="ageSlider" type="text" class="span2" value=""
+                   data-slider-min="0" data-slider-max="122" data-slider-step="1" data-slider-value="[0,100]" data-slider-handle="triangle"
+            >
+            &nbsp;&nbsp;<b>122</b>
+            <br><br>
+            <label class="control-label"> Date</label>
+            <br>
+            <b>1900</b>&nbsp;&nbsp;
+            <input id="dateSlider" type="text" class="span2" value=""
+                   data-slider-min="1900" data-slider-max="2014" data-slider-step="1" data-slider-value="[1990,2014]" data-slider-handle="triangle"
+            >
+            &nbsp;&nbsp;<b>2014</b>
+            <br><br>
+            <button id="filterBtn" class="btn btn-danger" type="button" onclick="filterMap()">Filter</button>
+          </div>
+        </div>
+        <!-- maps -->
+        <div id="map_canvas"></div>
+        <div id="legend" class="map_legend"></div>
+        
+      </div> <!-- end of AJAX swappie-goodness -->
+    
+    
+    </div>  <!-- /#not-footer -->
+    
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Footer
+     - - - - - - - - - - - - - - - - - - - -->
+    
+    <footer>
+      <p>Team, The</p>
+    </footer>
+    
+    
+    <!-- some js stuff that's important for stuff -->
+    <script type="text/javascript" src="scripts/filter.js"></script>
+    
+  </body>
+  
+  
+</html>
+
+
+<!-- EOF -->

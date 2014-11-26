@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+ //home.html
+ //
+ // Team, The  08/05/14            //
+ // for Landmine Incident Tracker  //
+ 
+ // Homepage : home
+ // A landing page which allows quick access to login and signup.
+ -->
+
+
+<html>
+  
+  
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   - - -                        HEAD                                     - - -
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <head>
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Document Interpretation
+     - - - - - - - - - - - - - - - - - - - -->
+     <meta http-equiv="Content-Type"     content="text/html; charset=UTF-8">
+     <meta http-equiv="Content-Language" content="en-ca">
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Page Attributes
+     - - - - - - - - - - - - - - - - - - - -->
+    <title>Landmine Incident Tracker</title>
+    <meta name="Author"                 content="Team, The">
+    <meta name="Description" lang="en"  content="The homepage of the Landmine Incident Tracker.">
+    <meta name="Keywords"    lang="en"  content="Landmine, Landmines, Incident Report">
+    <link rel="icon"             type="image/x-icon" href="images/favicon.ico"-->
+    <link rel="apple-touch-icon" type="image/png" href="images/favicon.png"-->
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Stylesheets
+     - - - - - - - - - - - - - - - - - - - -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.cox`m/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+  </head>
+  
+  
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   - - -                        BODY                                     - - -
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <body>
+    
+    
+    <div id="not-footer">
+		
+		
+			<!-- - - - - - - - - - - - - - - - - - - -
+			 Header
+			 - - - - - - - - - - - - - - - - - - - -->
+		
+			<header>
+				<nav class="navbar navbar-custom navbar-fixed-top container-fluid" role="navigation">
+				  
+          <!-- Title and Toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <!-- Title -->
+            <a id="HomeBtn" href="home.html" class="navbar-brand">
+              <img src="images/logo.png" alt="Landmine Tracker" width="200px">
+            </a>
+            <!-- Three-Bar Togle Button (for mobile) -->
+            <button type="button" class="navbar-toggle navbar-toggle-custom"
+                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+              <span class="icon-bar icon-custom"></span>
+            </button>
+          </div>
+        
+          <!-- Other Content (which is toggled) -->
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a id="MapBtn" href="map.html">View Map</a></li>
+              <li><a id="AboutBtn" href="about-static.html">About the Issue</a></li>
+              <li><a id="ContactBtn" href="contact-static.html">Contact Agencies</a></li>
+              <li><a id="DownloadBtn"
+                     href="https://landmine.firebaseio.com/.json?print=pretty&download=landmine_tracker-data_export.json"
+                  >Download Data</a></li>
+            </ul>
+          </div>
+          
+				</nav>
+			</header>
+		
+		
+			<div id="AJAX-swap-parent">
+				<div id="AJAX-swap-content">
+				
+					<!-- - - - - - - - - - - - - - - - - - - -
+					 Log In / Register
+					 - - - - - - - - - - - - - - - - - - - -->
+				
+					<div class="container firstDiv">
+						<div class="col-md-8 col-md-offset-2 loginSec">  
+							<h1>I want to report a landmine incident as a...</h1>
+							<form class="" name="login" id="login" action="" method="get">
+								<div class="col-md-4">
+									<a id="RegisterBtn" class="btn btn-success col-md-4 registerBtn" href="report_volunteer.html">Public Citizen</a> <!-- Nick Belland thought of this. -->
+								</div>
+								<div class="col-md-4">
+									<a id="LoginBtn" class="btn btn-success col-md-4 registerBtn" href="report_medical.html">Medical Professional</a>  
+								</div>
+								<div class="col-md-4">
+									<a id="LoginBtn" class="btn btn-success col-md-4 registerBtn" href="report_military.html">Military Personnel</a>  
+								</div>
+							</form>
+						</div>		<!-- /loginSec -->		
+				
+  					<!-- - - - - - - - - - - - - - - - - - - -
+  					 Map Button
+  					 - - - - - - - - - - - - - - - - - - - -->
+  				
+            <div class="row">
+              <a class="btn btn-success col-md-offset-4 homePageMapBtn" href="map.html">View Data on Map</a>  
+            </div>
+
+          </div>  <!-- /container -->
+			
+				</div>  <!-- /#AJAX-swap-content -->
+			</div>  <!-- /#AJAX-swap-parent -->
+		
+		
+		</div>  <!-- /#not-footer -->
+    
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Footer
+     - - - - - - - - - - - - - - - - - - - -->
+    
+		<footer>
+			<p>Team, The</p>
+		</footer>
+    
+    
+    <!-- - - - - - - - - - - - - - - - - - - -
+     Scripts
+     - - - - - - - - - - - - - - - - - - - -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   
+  </body>
+  
+  
+</html>
+
+
+<!-- EOF -->
