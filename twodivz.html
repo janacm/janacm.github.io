@@ -10,59 +10,32 @@
  -->
 <head>
 	<script src="assets/js/jquery-1.11.0.js"></script>
-	<script type="text/javascript">
-        // if (window.jQuery) {  
-        //     alert("works");
-        // }else {
-        //     alert("brokes");
-        // }
-	    </script>
-
-	<script type="text/javascript">
-		function left(){
-			// $("#left").css("zIndex",5);
-		}
-	</script>
 </head>
 <style type="text/css">
 /**/
 	img {
 		width: 38%;
 	}
-	#boss{
+	#picContainer{
+        border: 3px solid purple;
 		position: relative;
-		/*width: 100%;*/
-		/*border: 1px solid black;*/
 		display: flex;
-	    /*flex-direction: row;*/
-	    /*flex-wrap: wrap;*/
-	    /*justify-content: center;*/
-	    /*align-items: center;*/
 	}
 
 	#left{
-		/*display: inline-block;*/
+        border: 3px solid purple;
 		width:50%;
 		height: 22em;
-		/*border: 3px solid blue;*/
 		z-index: 1;
 	}
 	#right{
-		/*display: inline-block;*/
-		/*border: 3px solid red;*/
+        border: 3px solid purple;
 		width:50%;
 		z-index: 1;
 	}
 
-	#onTop{
-		/*position: absolute;*/
-		/*border: 3px solid green;*/
-		/*width:inherit;*/
-		/*left: 159px;*/
-	}
-
-	#imgDiv{
-		/*border: 3px solid purple;*/
+    #imgDiv{
+        border: 3px solid purple;
 		position: absolute;
 		left: 43%;
 	}
@@ -73,7 +46,7 @@
 </style>
 <body>
 	<div id="imgDiv"><img src="assets/images/original.png"></div>
-	<div id="boss">
+	<div id="picContainer">
 		<!-- <div id="onTop"><p>green div</p></div> -->
 		<div id="left"></div>
 		<div id="right"></div>

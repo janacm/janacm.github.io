@@ -3,13 +3,6 @@ body {
     background-color: black;
     color: white!important;
 }
-#backgroundMainPic{
-  width: 30%;
-}
-article {
- /*   border: 5px;
-    margin: 5px;*/
-}
 
 html,
 body {
@@ -28,69 +21,19 @@ a:hover{
 a:visited{
   background-color: #1e90ff!important;
 }
-/* Wrapper for page content to push down footer */
-/*try this on a long page and see the difference*/
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
-/* Set the fixed height of the footer here */
-#footer {
-  height: 60px;
-}
-
-/*footer stop*/
-/*img#mainpic{
-  width: 100%;*/
-  /*width: 124%;
-  position: relative;
-  right: 12%;*/
-  
-
-}
-#switchPic{
-    /*border: 20px solid orange;
-    border-radius: 30px;
-    width: 30%;
-    height: 60%;
-    float: left;*/
-}
-
 
 nav {
-    background-color: #357EC7!important;
-    border: 2px solid white!important;
+  background-color: #357EC7!important;
+  border: 2px solid white!important;
 }
 
 nav li a{
-      color:white!important;
-    }
-
-small{
-    font-size: 0.09em;
+  color:white!important;
 }
 
 a {
   color: orange;
 }
-
-#underNav{
-  float: left;
-  position: absolute;
-  /*border: 3px solid white;*/
-  font: 20pt solid white;
-}
-
-.itemExists {
-        width: 100px;
-        height: 100px;
-        border: 2px solid black;
-    }
 
 .blackout{
   background-color: black!important;
@@ -105,11 +48,6 @@ a {
   visibility: hidden!important;
 }
 
-iframe[seamless] {
-    border: none;
-    width: 100%;
-}
-
 #quickFacts{
   text-align: left;
   float: right;
@@ -118,37 +56,49 @@ iframe[seamless] {
   font-size: 17px;
   line-height: 30pt;  
 }
-.imgborder {
-    border: 5px;
-    margin: 5px;
-}
 
-.overlayText{
-  position: absolute;
-  color: red;
-  font-size: 58pt;
-  border: 10px solid black;
-  padding: 1%;
-}
-
-#fname{
-  left: 3%;
-}
-
-#lname{
-  left: 8%;
-  top: 29%;
-}
-
-#enter{
-  position: absolute;
-  color:white;  
-  left: 48%;
-  top: 3%;
-  font-size: 170%
-}
 
 .indexPic{
   position: absolute;
   
+}
+
+/*------------------------------------------
+----- Styles for on hover images change ----
+-------------------------------------------*/
+
+img {
+  width: 30%;
+  position: relative;
+  right: 4%;
+}
+
+#picContainer{
+  /*border: 3px solid purple;*/
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+
+#left{
+  /*border: 3px solid blue;*/
+  width:50%;
+}
+
+#right{
+  /*border: 3px solid green;*/
+  width:50%;
+}
+
+#imgDiv{
+  /*border: 3px solid yellow;*/
+  position: absolute;
+}
+
+#original{
+  position: absolute;
+}
+
+.container{
+  height: 100%
 }
