@@ -1,0 +1,64 @@
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+h1{
+  font-family: 'Signika', sans-serif;
+  text-align: center;
+}
+
+#title1{
+  color: peachpuff;
+  position: absolute;
+  left: 10%;
+  top: 10px;
+}
+
+#title2{
+  color: darkgreen;
+}
+
+#optionsContainer{
+  margin: 0 auto;
+  width:100%;
+  text-align: center; padding: 0;
+}
+
+ul{
+  color: white;
+  display:inline-flex;
+  padding: 12em 12em 12em 12em;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+li{
+  border: 1px solid white;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+#research{
+  border: 2px solid cadetblue;
+  display: inline;
+  position: relative;
+  left: 60%;
+}
+
+#firstTime{
+  border: 2px solid greenyellow;
+  display: inline;
+  position: relative;
+  /*left: 30%;*/
+  margin: 0 auto;
+  width: 10px;
+}
+
+#urge{
+  border: 2px solid green;
+  display: inline;
+  position: relative;
+  left: 10%;
+}
