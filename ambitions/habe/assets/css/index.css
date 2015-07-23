@@ -2,8 +2,12 @@ body {
   width: 100%;
   background-color: black;
   color: white;
+	border: 10px solid black;
 }
 
+a {
+	color: white;
+}
 h1{
   font-family: 'Signika', sans-serif;
   text-align: center;

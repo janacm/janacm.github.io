@@ -1,0 +1,12 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	width: 50%;
+	color: white;
+	background-color: royalblue;
+	text-align: justify;
+	margin: 0 auto;
+}
