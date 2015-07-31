@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Local Storage</title>
+</head>
+<body>
+  <h1> HTML5 Local Storage Tutorial </h1>
+  <section>
+    <h1> 1) WARM UP </h1>
+    <p> Open up a console in Chrome (ctrl+shift+j) and try typing this into your console: </p>
+    <pre>
+      localStorage.setItem("my name", "janac");
+      localStorage.getItem("my name");
+    </pre>
+    <p> The result should be "janac" or whatever you entered instead.</p>
+    <ul>
+      <li> What just happened?
+        <ul>
+          <li> You used HTML5 Storage aka Web Storage aka Local Storage to locally store data on the client</li>
+          <li> This key value pair, "my name":"janac" will persist even after refreshing the page or closing the browser. (Try it) </li>
+          <li> This key value pair, is attached to the webpage you were on when you ran the setItem command. getItem("my name") will return null on other web pages.</li>
+        </ul>
+      </li>
+      <li> What next?
+        <ul>
+          <li> Try refreshing the page and running getItem("my name") if you haven't already done so.</li>
+        </ul>
+      </li>
+    </ul>
+    <details>
+      <summary> History Lesson </summary>
+      <p> Before HTML5 local storage, the pioneers had a number of inferior methods of implemented local storage, but they all sucked for various reasons:</p>
+      <ul>
+        <li> They would require 3rd party plugins (Dojo Toolkit)</li>
+        <li> It would be browser specific (Google Gears, IE DHTML userData) </li>
+        <li> They used cookies, which have a maximum file size of 4kb data, and can slow down your web app </li>
+      </ul>
+    </details>
+  </section>
+  <hr>
+  <section>
+    <h1> 2) Saving user input</h1>
+    <label> Enter your favourite animal </label>
+    <input type="text" id="animal_input" placeholder="Platypus">
+    <button id="animal_button" onclick="storeAnimal()"> is my favourite animal.</button>
+    <div id="userAnimal"></div>
+    <h2> What just happened?</h2>
+    <ul>
+      <li> The following:
+        <ul>
+          <li> Some text you entered was stored into a key-value pair and outputted into a div</li>
+          <li> The line "YOU LOVE: (text you entered)" will stay there even after refreshing page, or closing browser</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Code </h2>
+    <h3>Summary</h3>
+    <ol>
+      <li> localStorage.setItem("user_input", document.getElementById(user_input)); </li>
+      <li> divToPutOutputIn.innerHTML(localStorage.getItem("user_input"));</li>
+    </ol>
+    <ul>
+      <li> See <a href="http://jsfiddle.net/janac/2uy81bgL/">js fiddle</a> but note that it will not work the same as it does on this page.</li>
+      <li>
+        <details>
+          <summary> Or see code here </summary>
+          <pre>
+            if (localStorage.length !=0){ //check if any data has been stored yet
+              if (localStorage.getItem("fav_animal") !=null){
+                //alert("YOU LOVE " + localStorage.getItem("fav_animal")); //uses the key "fav_animal" defined in the function storeAnimal() below
+                var divToFill = document.getElementById("userAnimal"); //get the div where i want to output the stored data
+                divToFill.innerHTML = ("YOU LOVE " + localStorage.getItem("fav_animal")); // output stored data
+              }
+            }
+            //This function is called onclick of the "is my favourite animal." button
+            function storeAnimal(){
+              var fav_animal = document.getElementById('animal_input').value; //get user entered text
+              localStorage.setItem("fav_animal",fav_animal); //store it in localStorage
+              location.reload(); //reload the page
+            }
+          </pre>
+        </details>
+      </li>
+    </ul>
+  </section>
+  <hr>
+  <section>
+    <h1> 3) Clearing and removing data  </h1>
+    <h2> Clearing all existing data.</h2>
+    <code> localStorage.clear() </code> <button onclick="javascript: localStorage.clear(); location.reload()"> Clear</button>
+    <p> After clicking Clear, notice the text above that said "YOU LOVE :(animal) has now vanished.</p>
+
+    <h2>Removing specific key</h2>
+  <code> localStorage.removeItem("fav_animal") </code> <button onclick="javascript: localStorage.removeItem('fav_animal'); location.reload()"> Clear</button>
+  </section>
+</body>
+<script type="text/javascript">
+// for animal example
+if (localStorage.length !=0){
+  if (localStorage.getItem("fav_animal") !=null){
+    //alert("YOU LOVE " + localStorage.getItem("fav_animal"));
+    var divToFill = document.getElementById("userAnimal");
+    divToFill.innerHTML = ("YOU LOVE " + localStorage.getItem("fav_animal"));
+  }
+}
+function storeAnimal(){
+  var fav_animal = document.getElementById('animal_input').value;
+  localStorage.setItem("fav_animal",fav_animal);
+  location.reload();
+}
+</script>
+</html>
