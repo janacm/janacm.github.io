@@ -2,11 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/index.css">
     <title>Q1</title>
-    
+    <style>
+      #ans{
+        color:white;
+      }
+
+    </style>
 </head>
 <body>
     <header>
@@ -14,9 +19,10 @@
             <!-- <h1>1</h1>
             <h3>a)</h3> -->
             <p>Check if all characters in a given string are unique</p>
-            <input type="text" id="stringInput" placeholder="enter string!"/> 
-            <button onclick="uniqueChecker1()">Click</button>
-            <button onclick="uniqueChecker2()">No sort method</button>
+            <input type="text" id="stringInput" placeholder="enter string!" autofocus tabindex="1"/>
+            <button onclick="uniqueChecker1()">Go!</button>
+            <!-- <button onclick="uniqueChecker2()">No sort method (incomplete)</button> -->
+            <div id="ans"></div>
         </div>
     </header>
 
@@ -24,14 +30,14 @@
 
 <script type="text/javascript">
 
-    /* 
+    /*
         1. Copy all characters into a char array
         2. Sort array
         3. Check if array[i] == array[i+1]
     */
     function uniqueChecker1(){
         var givenString = document.getElementById('stringInput').value;
-        var chars = new Array(givenString.length); 
+        var chars = new Array(givenString.length);
         var isUnique = true;
 
         for (var i=0; i<givenString.length; i++){
@@ -48,18 +54,20 @@
 
         // alert(isUnique);
         console.log(isUnique);
+        var ans = document.getElementById("ans");
+        ans.innerHTML =isUnique;
         // console.log("function completed");
     }
 
-    
+
     // * No data structure
     // * No Java API method calls
-   	
-	
+
+
 	// BEST: put them in buckets
 	// 1. extract j
 	// assumption is that indicies are created on the fly
-    
+
     function uniqueChecker2(){
     	var givenString = document.getElementById('stringInput').value;
         var isUnique = true;

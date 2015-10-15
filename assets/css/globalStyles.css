@@ -1,0 +1,12 @@
+/*Ambitions*/
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
