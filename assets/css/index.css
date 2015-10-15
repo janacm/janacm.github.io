@@ -48,36 +48,13 @@ a {
   visibility: hidden!important;
 }
 
-#quickFacts{
-  text-align: left;
-  float: right;
-  position: relative;
-  top: 14px;
-  font-size: 17px;
-  line-height: 30pt;  
-}
-
-
-.indexPic{
-  position: absolute;
-  
-}
-
-/*------------------------------------------
------ Styles for on hover images change ----
--------------------------------------------*/
-
-img {
-  width: 30%;
-  position: relative;
-  right: 4%;
-}
-
 #picContainer{
-  /*border: 3px solid purple;*/
-  position: relative;
-  height: 100%;
-  display: flex;
+  display:inline-flex;
+}
+
+#picContainer img{
+  width: 95%;
+  box-shadow: #1e90ff 0px 0px 24px 2px;
 }
 
 #left{
