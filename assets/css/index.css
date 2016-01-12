@@ -1,81 +1,22 @@
-body {
-    text-align: center;
-    background-color: black;
-    color: white!important;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-a:hover{
-  /*color: #1e90ff!important;*/
-  text-decoration: none;
-}
-
-#first:hover{
-  color: red!important;
-}
-
-a:visited{
-  background-color: #1e90ff!important;
-}
-
-nav {
-  background-color: #357EC7!important;
-  border: 2px solid white!important;
-}
-
-nav li a{
-  color:white!important;
-}
-
-a {
-  color: orange;
-}
-
-.blackout{
-  background-color: black!important;
-  color: black!important;
-}
-
-.visible{
-  visibility: visible!important;
-}
-
-.invisible{
-  visibility: hidden!important;
-}
-
+/*see globalStyles.css for html,body,a etc. */
 #picContainer{
-  display:inline-flex;
+  float:left;
 }
+
+#links li{
+  padding: 3%;
+  font-size: 28pt;
+}
+
+#links a{
+}
+
+
 
 #picContainer img{
   width: 95%;
+}
+
+#picContainer img:hover{
   box-shadow: #1e90ff 0px 0px 24px 2px;
-}
-
-#left{
-  /*border: 3px solid blue;*/
-  width:50%;
-}
-
-#right{
-  /*border: 3px solid green;*/
-  width:50%;
-}
-
-#imgDiv{
-  /*border: 3px solid yellow;*/
-  position: absolute;
-}
-
-#original{
-  position: absolute;
-}
-
-.container{
-  height: 100%
 }
