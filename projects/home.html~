@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/globalStyles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
+		<meta charset ="utf-8">
+		<title>Janac Meena > Projects</title>
+	</head>
+  <body>
+		<h1>Projects</h1>
+    <div id="projects">
+      <div class="project">
+        <header> <a href="https://docs.google.com/presentation/d/1iJd4wnYjfLV2xY1F_iTdmVSL4pnABPg9LJJK3xyvepg/edit?usp=sharing">Momenta</a></header>
+				<p>
+					Momenta is unique productivity app based on the tenants of gamificiation and positive psychology. It is being built by a team of software engineering capstone students and will be available Janaury 2017 or earlier. 
+				</p>
+      </div>
+      <div class="project">
+        <header> <a href="LandmineTracker/home.html">Landmine Tracker</a></header>
+				<p>
+					Landmine Tracker is a website that lets civillians report incidents about landmines left over from past warfare.
+					The imported data is then plotted onto a map, and converted into JSON format for use by statisticians.
+				</p>
+      </div>
+    </div>
+  </body>
+</html>
