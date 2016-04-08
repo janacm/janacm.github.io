@@ -1,180 +1,179 @@
 <html>
 <head>
-    <script type="text/javascript">
-      // Your Client ID can be retrieved from your project in the Google
-      // Developer Console, https://console.developers.google.com
-      var CLIENT_ID = '523819935458-067tls3kg8s2odnrtd7bl622r4a0dlfn.apps.googleusercontent.com';
+<script type="text/javascript">
+    // Your Client ID can be retrieved from your project in the Google
+    // Developer Console, https://console.developers.google.com
+    var CLIENT_ID = '523819935458-067tls3kg8s2odnrtd7bl622r4a0dlfn.apps.googleusercontent.com';
+    var SCOPES = ["https://www.googleapis.com/auth/calendar"];
+    var apiKey = 'AIzaSyBZn5Aizlu94stQI6oCdz4SpwIqHfhyfQo';
+    var intervalTime = 1800*1000; //half hr
 
-      var SCOPES = ["https://www.googleapis.com/auth/calendar"];
-
-      var apiKey = 'AIzaSyBZn5Aizlu94stQI6oCdz4SpwIqHfhyfQo';
-
-      // from https://developers.google.com/api-client-library/javascript/start/start-js#how-it-looks-in-javascript
-      function handleClientLoad() {
-        // Step 2: Reference the API key
-        gapi.client.setApiKey(apiKey);
-        window.setTimeout(checkAuth,1);
+    // from https://developers.google.com/api-client-library/javascript/start/start-js#how-it-looks-in-javascript
+    function handleClientLoad() {
+      // Step 2: Reference the API key
+      gapi.client.setApiKey(apiKey);
+      window.setTimeout(checkAuth,1);
     }
 
-      /**
-       * Check if current user has authorized this application.
-       */
-       function checkAuth() {
-        gapi.auth.authorize(
-        {
-          'client_id': CLIENT_ID,
-          'scope': SCOPES.join(' '),
-          'immediate': true
+    /**
+     * Check if current user has authorized this application.
+     */
+     function checkAuth() {
+      gapi.auth.authorize(
+      {
+        'client_id': CLIENT_ID,
+        'scope': SCOPES.join(' '),
+        'immediate': true
       }, handleAuthResult);
     }
 
-      /**
-       * Handle response from authorization server.
-       *
-       * @param {Object} authResult Authorization result.
-       */
-       function handleAuthResult(authResult) {
-        var authorizeDiv = document.getElementById('authorize-div');
-        if (authResult && !authResult.error) {
-          // Hide auth UI, then load client library.
-          authorizeDiv.style.display = 'none';
-          // loadCalendarApi();
+    /**
+     * Handle response from authorization server.
+     *
+     * @param {Object} authResult Authorization result.
+     */
+     function handleAuthResult(authResult) {
+      var authorizeDiv = document.getElementById('authorize-div');
+      if (authResult && !authResult.error) {
+        // Hide auth UI, then load client library.
+        authorizeDiv.style.display = 'none';
+        // loadCalendarApi();
       } else {
-          // Show auth UI, allowing the user to initiate authorization by
-          // clicking authorize button.
-          authorizeDiv.style.display = 'inline';
+        // Show auth UI, allowing the user to initiate authorization by
+        // clicking authorize button.
+        authorizeDiv.style.display = 'inline';
       }
-  }
-
-      /**
-       * Initiate auth flow in response to user clicking authorize button.
-       *
-       * @param {Event} event Button click event.
-       */
-       function handleAuthClick(event) {
-        gapi.auth.authorize(
-          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
-          handleAuthResult);
-        return false;
     }
 
-      /**
-       * Load Google Calendar client library. List upcoming events
-       * once client library is loaded.
-       * J: looks like this is alternative to using REST or CORS. 
-       */
-        //J: perhaps here, i would change it to "addEventEntry" so that on load it runs that function
-        // but how do i make it load multiple times? 
-        function loadCalendarApi() {
-        // gapi.client.load('calendar', 'v3', setInterval(createEvent,2000)); // with interval popups
-        gapi.client.load('calendar', 'v3', createEvent);
+    /**
+     * Initiate auth flow in response to user clicking authorize button.
+     *
+     * @param {Event} event Button click event.
+     */
+     function handleAuthClick(event) {
+      gapi.auth.authorize(
+        {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+        handleAuthResult);
+      return false;
     }
 
-      /**
-       * Print the summary and start datetime/date of the next ten events in
-       * the authorized user's calendar. If no events are found an
-       * appropriate message is printed.
-       */
-       function listUpcomingEvents() {
-        // var request = gapi.client.calendar.events.list({
-        //   'calendarId': 'primary',
-        //   'timeMin': (new Date()).toISOString(),
-        //   'showDeleted': false,
-        //   'singleEvents': true,
-        //   'maxResults': 10,
-        //   'orderBy': 'startTime'
-        // });
-
-        // request.execute(function(resp) {
-        //   var events = resp.items;
-        //   appendPre('Upcoming events:');
-
-        //   if (events.length > 0) {
-        //     for (i = 0; i < events.length; i++) {
-        //       var event = events[i];
-        //       var when = event.start.dateTime;
-        //       if (!when) {
-        //         when = event.start.date;
-        //       }
-        //       appendPre(event.summary + ' (' + when + ')')
-        //     }
-        //   } else {
-        //     appendPre('No upcoming events found.');
-        //   }
-
-        // });
+    /**
+     * Load Google Calendar client library. List upcoming events
+     * once client library is loaded.
+     * J: looks like this is alternative to using REST or CORS. 
+     */
+      //J: perhaps here, i would change it to "addEventEntry" so that on load it runs that function
+      // but how do i make it load multiple times? 
+      function loadCalendarApi() {
+      gapi.client.load('calendar', 'v3', setInterval(createEvent,intervalTime)); // with interval popups
+      // gapi.client.load('calendar', 'v3', createEvent);
     }
 
-       // code below is from https://developers.google.com/google-apps/calendar/v3/reference/events/insert#examples
-       var countOfprompts= 0;
-       function createEvent() {
-        var currentTime = new Date();
-    //  alert(currentTime);
+    /**
+     * Print the summary and start datetime/date of the next ten events in
+     * the authorized user's calendar. If no events are found an
+     * appropriate message is printed.
+     */
+     function listUpcomingEvents() {
+      // var request = gapi.client.calendar.events.list({
+      //   'calendarId': 'primary',
+      //   'timeMin': (new Date()).toISOString(),
+      //   'showDeleted': false,
+      //   'singleEvents': true,
+      //   'maxResults': 10,
+      //   'orderBy': 'startTime'
+      // });
+
+      // request.execute(function(resp) {
+      //   var events = resp.items;
+      //   appendPre('Upcoming events:');
+
+      //   if (events.length > 0) {
+      //     for (i = 0; i < events.length; i++) {
+      //       var event = events[i];
+      //       var when = event.start.dateTime;
+      //       if (!when) {
+      //         when = event.start.date;
+      //       }
+      //       appendPre(event.summary + ' (' + when + ')')
+      //     }
+      //   } else {
+      //     appendPre('No upcoming events found.');
+      //   }
+
+      // });
+    }
+
+     // code below is from https://developers.google.com/google-apps/calendar/v3/reference/events/insert#examples
+     var countOfprompts= 0;
+     function createEvent() {
+      var currentTime = new Date();
+  //  alert(currentTime);
 //        var userInput = document.getElementById("userInputtedEventName").value;
-
 var event = {
-  'summary': userInput,
-  'description': 'Created by reverse calendar',
-  'start': {
-            // 'dateTime': '2016-03-14T09:00:00-04:00', //the time specified here will be the time in toronto
-            'dateTime': new Date(Date.now() - 3600*1000),
-            'timeZone': 'America/Toronto'
+'summary': userInput,
+'description': 'Created by reverse calendar',
+'start': {
+          // 'dateTime': '2016-03-14T09:00:00-04:00', //the time specified here will be the time in toronto
+          'dateTime': new Date(Date.now() - intervalTime), //prompts set to half hr
+          'timeZone': 'America/Toronto'
         },
         'end': {
-            // 'dateTime': '2017-03-14T10:00:00-04:00',
-            'dateTime': currentTime, //should round this to nearest half-hour?
-            'timeZone': 'America/Toronto'
+          // 'dateTime': '2017-03-14T10:00:00-04:00',
+          'dateTime': currentTime, //should round this to nearest half-hour?
+          'timeZone': 'America/Toronto'
         },
         'reminders': {
-            'useDefault': false,
-            'overrides': [
-            {'method': 'email', 'minutes': 24 * 60},
-            {'method': 'popup', 'minutes': 10}
-            ]
+          'useDefault': false,
+          'overrides': [
+          {'method': 'email', 'minutes': 24 * 60},
+          {'method': 'popup', 'minutes': 10}
+          ]
         }
-    };
+      };
 
-        var request = gapi.client.calendar.events.insert({ //assemble the request
-          'calendarId': 'primary',
-          'resource': event
+      var request = gapi.client.calendar.events.insert({ //assemble the request
+        'calendarId': 'primary',
+        'resource': event
       });
 
-        request.execute(function(event) { //execute the api request. could use "then" instead
-          appendPre('Event created: ' + event.htmlLink);
+      request.execute(function(event) { //execute the api request. could use "then" instead
+        appendPre('Event created: ' + event.htmlLink);
       });
     }
 
-      /**
-       * Append a pre element to the body containing the given message
-       * as its text node.
-       *
-       * @param {string} message Text to be placed in pre element.
-       */
-       function appendPre(message) {
-        var pre = document.getElementById('output');
-        var textContent = document.createTextNode(message + '\n');
-        pre.appendChild(textContent);
-    }
+    /**
+     * Append a pre element to the body containing the given message
+     * as its text node.
+     *
+     * @param {string} message Text to be placed in pre element.
+     */
+     function appendPre(message) {
+      var pre = document.getElementById('output');
+      var textContent = document.createTextNode(message + '\n');
+      pre.appendChild(textContent);
+      }
 
-var userInput = prompt("How did you spend your last hour?");
-countOfprompts++;
+    var userInput = prompt("From RevCal web: How did you spend your last hour?");
+    countOfprompts++;
 
-</script>
-<script src="https://apis.google.com/js/client.js?onload=checkAuth">
-</script>
+  </script>
+  <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+  </script>
 </head>
 <body onload="loadCalendarApi()">
-    <div id="authorize-div" style="display: none">
-      <span>Authorize access to Google Calendar API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
-        Authorize
+  <div id="authorize-div" style="display: none">
+    <span>Authorize access to Google Calendar API</span>
+    <!--Button for the user to click to initiate auth sequence -->
+    <button id="authorize-button" onclick="handleAuthClick(event)">
+      Authorize
     </button>
-</div>
-<pre id="output"></pre>
-<label>Enter an event name to be inserted</label>
-<input type="text" id="userInputtedEventName">
-<!-- <button id="createEventBtn" onclick="loadCalendarApi()">Add event to calendar</button>  -->
-<!-- user must wait until authentication is complete before doing pressing submit -->
+  </div>
+  <pre id="output"></pre>
+  <label>Enter an event name to be inserted</label>
+  
+  <!-- <input type="text" id="userInputtedEventName"> -->
+  <!-- <button id="createEventBtn" onclick="loadCalendarApi()">Add event to calendar</button>  -->
+  <!-- user must wait until authentication is complete before doing pressing submit -->
 </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>rest</title>
+    <script src="rest.js"></script>
+</script>
+</head>
+<body>
+    <input type="button" onclick="doalert()" value="sdf"></input>
+    <input type="button" onclick="httpGet(document.getElementById('url').value)" value="get from input"></input>
+    <input type="button" onclick="httpGet('http://www.google.ca')" value="get"></input>
+    <input type="text" placeholder="enter url" id="url"></input>
+    <!-- <input type="button" onclick="alert(document.getElementById('url').value)" value="async getl"></input> -->
+    <input type="button" onclick="httpGet('http://www.google.ca')" value="async getl"></input>
+    <input type="button" onclick="alert(document.getElementById('url').value)" value="alert url"></input>
+
+</body>
+</html>
