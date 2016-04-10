@@ -40,7 +40,7 @@ function handleAuthResult(authResult) {
 // Show auth UI, allowing the user to initiate authorization by
 // clicking authorize button.
         console.log("Janac - error: " + authResult.error);
-        authorizeDiv.style.display = 'inline';
+    authorizeDiv.style.display = 'inline';
     }
 }
 
