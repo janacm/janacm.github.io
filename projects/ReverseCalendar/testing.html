@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JS functions</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", onLoadOfDOM);
+        function onLoadOfDOM(){
+            console.log("onLoadofDom start");
+//            document.getElementById("button1").addEventListener("click", onButtonClicked(event)); // this does not work
+            document.getElementById("button1").addEventListener('click', onButtonClicked);
+            run();
+        }
+
+        function onButtonClicked(){
+            console.log("butt 1 clicked!");
+        }
+
+        function onButtonClicked(event){
+            console.log("butt 1 clicked!");
+        }
+
+        function dualCounter(){
+            var num1 = document.getElementById('num1');
+            var num2 = document.getElementById('num2');
+            num1.innerHTML = new Date();
+        }
+
+        function run(){
+            setInterval(dualCounter, 1000);
+        }
+    </script>
+</head>
+<body>
+
+<span id="num1">000</span>
+<span id="num2">000</span>
+<button id="button1">butt 1</button>
+<button id="button2" onclick="console.log('butt 2 clicked')">butt 2</button>
+</body>
+</html>
