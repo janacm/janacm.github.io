@@ -17,7 +17,7 @@ function checkAuth() {
         {
             'client_id': CLIENT_ID,
             'scope': SCOPES.join(' '),
-            'immediate': true
+            'immediate': false
         }, handleAuthResult);
 }
 
@@ -51,15 +51,15 @@ function handleAuthResult(authResult) {
  */
 function handleAuthClick(event) {
     gapi.auth.authorize(
-        {client_id: CLIENT_ID, scope: SCOPES, response_type: "token", immediate: true},
+        {client_id: CLIENT_ID, scope: SCOPES, response_type: "token", immediate: false},
         handleAuthResult);
     return false;
 }
 
 function getIntervalTime() {
-    var i = 1800 * 1000;  //half hr
-    //var i = 900 * 1000;  //15 mins
-    //var i = 5000;
+    //var i = 1800 * 1000;  //half hr
+    var i = 900 * 1000;  //15 mins
+    var i = 5000;
     return i;
 }
 
