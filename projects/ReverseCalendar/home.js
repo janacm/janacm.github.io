@@ -57,8 +57,8 @@ function handleAuthClick(event) {
 }
 
 function getIntervalTime() {
-    //var i = 1800 * 1000;  //half hr
-    var i = 900 * 1000;  //15 mins
+    var i = 1800 * 1000;  //half hr
+    // var i = 900 * 1000;  //15 mins
     //var i = 5000;
     return i;
 }
