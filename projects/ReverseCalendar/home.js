@@ -59,7 +59,7 @@ function handleAuthClick(event) {
 function getIntervalTime() {
     //var i = 1800 * 1000;  //half hr
     var i = 900 * 1000;  //15 mins
-    var i = 5000;
+    //var i = 5000;
     return i;
 }
 
@@ -72,6 +72,7 @@ function getIntervalTime() {
 function loadCalendarApi() {
     var intervalTime = getIntervalTime();
     console.log("prompt interval occurs every: " + intervalTime + "milliseconds");
+    document.getElementById("timeUntilTokenExpiration").innerHTML = intervalTime;
     gapi.client.load('calendar', 'v3', setInterval(createEvent,intervalTime)); // with interval popups
     setInterval(checkAuth, 1000*1000); //get access token every 1000 seconds.
 }
