@@ -4,14 +4,16 @@ html, body{
   width: 95%;
   background-color: black;
   color: white;
+  font-family: Helvetica, serif;
 }
 
 body {
-    text-align: center;
+  text-align: center;
+    font-size: 18pt;
 }
 
 a:hover{
-  box-shadow: #1e90ff 0px 0px 24px 2px;
+  box-shadow: #1e90ff 0 0 24px 2px;
 }
 
 a:visited{

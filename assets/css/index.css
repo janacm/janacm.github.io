@@ -1,17 +1,13 @@
 /*see globalStyles.css for html,body,a etc. */
 #picContainer{
   float:left;
+  width: 30%;
 }
 
 #links li{
   padding: 3%;
   font-size: 18pt;
 }
-
-#links a{
-}
-
-
 
 #picContainer img{
   width: 95%;
